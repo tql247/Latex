@@ -1,0 +1,207 @@
+\newpage
+\changefontsizes{16pt}
+\centerline{\textbf{\hyperlink{page.6}{CHƯƠNG 3: THỰC NGHIỆM}}}
+
+%
+\bigskip
+\changefontsizes{14pt}
+
+\leftskip0cm
+\setlength{\parindent}{0.0cm}
+\textbf{3.1 Dữ liệu.}
+
+\smallskip
+\changefontsizes{13pt}
+\setlength{\parindent}{1cm}
+\leftskip0cm
+
+%fill here
+Các testcase được tìm kiếm trên mạng hoặc do chính người lập trình nghĩ ra để test nhiều trường hợp khác nhau. Khi báo cáo có thể sẽ có thêm nhiều testcase khác do người hướng dẫn cung cấp.
+
+\bigskip
+\changefontsizes{14pt}
+
+\setlength{\parindent}{0.0cm}
+\textbf{3.2 Công nghệ.}
+
+
+\smallskip
+\changefontsizes{14pt}
+
+\setlength{\parindent}{0.5cm}
+\textbf{3.2.1 Ngôn ngữ lập trình.}
+
+\smallskip
+\changefontsizes{13pt}
+\setlength{\parindent}{1cm}
+
+\leftskip0.5cm
+Ngôn ngữ lập trình được sử dụng trong bài báo cáo này là Python. Ngoài việc Python là ngôn ngữ bắt buộc khi học môn học này thì nó đang dần trở nên phổ biến hơn ngày nay. Sự phát triển của nhiều ngành như trí tuệ nhân tạo, học máy một cách nhanh chóng, các thuật toán ngày càng trở nên tinh vi hơn thì việc sử dụng Python sẽ giúp chúng ta tiếp cận mọi thứ một cách dễ dàng, hiệu quả hơn. Ngoài ra, Python còn rất dễ sử dụng, dễ cài đặt, vì thế nên nó càng trở nên dễ tiếp cận với mọi người.
+%fill here
+
+
+\leftskip0cm
+\bigskip
+\changefontsizes{14pt}
+
+
+\setlength{\parindent}{0.5cm}
+\textbf{3.2.2 Thư viện.}
+
+\smallskip
+\changefontsizes{13pt}
+\setlength{\parindent}{1cm}
+\leftskip0.5cm
+
+%fill here
+Bài báo cáo chỉ gồm 3 bài tập theo yêu cầu và đây lại là môn học phân tích và thiết kế giải thuật nên bài báo cáo không sử dụng thư viện nào hổ trợ. Đây lại là những bài toán cơ bản, điển hình cho chủ đề của đồ án nên việc sử dụng thư viện có thể không cần thiết, sinh viên có thể tự hoàn thiện code của mình mà không cần thư viện.
+
+
+\leftskip0cm
+\bigskip
+\changefontsizes{14pt}
+
+\setlength{\parindent}{0.0cm}
+\textbf{3.3 Thực nghiệm.}
+
+\smallskip
+\changefontsizes{14pt}
+
+\setlength{\parindent}{0.5cm}
+\textbf{3.3.1 Bài toán dãy con tăng dài nhất.}
+
+\smallskip
+\leftskip0.5cm
+\changefontsizes{13pt}
+\textbf{Ý tưởng}
+
+
+\leftskip1.5cm
+\setlength{\parindent}{0cm}
+- Tạo một mảng lưu giá trị của từng phần tử trong dãy số, có giá trị đầu là 0.
+
+- Duyệt dãy số từ cuối ngược lên đầu. Tại mỗi phần tử, giá trị mới của nó bằng giá trị lớn nhất trong số các phần tử lớn hơn nó cộng thêm 1.
+
+- Từ mảng các giá trị chọn ra dãy con tăng dài nhất của dãy số.
+
+
+\begin{figure}[h!]
+	\includegraphics[scale=0.2]{./image/LCS.png}
+	\caption{Mảng giá trị của dãy số.}
+\end{figure}
+
+
+\leftskip1cm
+
+\setlength{\parindent}{0cm}
+\textbf{Mã giả}
+
+\smallskip
+\leftskip1.5cm
+
+\input{other/algorithm1}
+
+
+\leftskip0cm
+
+
+\bigskip
+\changefontsizes{14pt}
+\setlength{\parindent}{0.5cm}
+\textbf{3.3.2 Bài toán dãy con chung dài nhất LCS.}
+
+
+\smallskip
+\leftskip0.5cm
+\changefontsizes{13pt}
+\textbf{Ý tưởng}
+
+
+\leftskip1.5cm
+\setlength{\parindent}{0cm}
+- Hai chuỗi đầu vào sẽ được tách nhỏ ra để tìm kiếm dãy con chung dài nhất sau đó tổng hợp lại và chọn chuỗi dài nhất mà hàm tìm được.
+
+- Bài toán sẽ được giải theo đệ quy với điều kiện dừng là khi một trong hai (hoặc cả hai) chuỗi không còn ký tự để so sánh.
+
+
+\vspace{-0.5cm}
+\begin{figure}[h!]
+	\includegraphics[scale=0.3675]{./image/LCSo.png}
+	\caption{Minh họa hàm đệ quy LCS.}
+\end{figure}
+
+
+\leftskip1cm
+
+
+\setlength{\parindent}{0cm}
+\textbf{Mã giả}
+
+
+\smallskip
+\leftskip1.5cm
+
+\input{other/algorithm2}
+
+
+\leftskip0cm
+\setlength{\parindent}{0.5cm}
+
+\bigskip
+\changefontsizes{14pt}
+\textbf{3.3.3 Bài toán cây nhị phân vô hạn.}
+
+
+
+\smallskip
+\leftskip0.5cm
+\changefontsizes{13pt}
+\textbf{Ý tưởng}
+
+\leftskip1.5cm
+
+\setlength{\parindent}{0cm}
+
+
+- Chuỗi lưu các node trên cây trong cuộc dạo chơi sẽ được cắt thành các cuộc dạo chơi ngắn hơn sau đó tổng hợp lại để tính giá trị cuối cùng.
+
+- Dùng một biến lưu trữ giá trị hiện thời của node, với giá trị đầu là 1.
+
+
+\vspace{-0.5cm}
+\begin{figure}[h!]
+	\includegraphics[scale=0.3]{./image/tree.png}
+	\caption{Minh họa cách tính giá trị của chuyến đi trên cây.}
+\end{figure}
+
+\leftskip0cm
+
+
+\leftskip1cm
+\setlength{\parindent}{0cm}
+\textbf{Mã giả}
+
+
+\leftskip1.5cm
+
+
+\input{other/algorithm3}
+
+
+\leftskip0cm
+
+\bigskip
+\changefontsizes{14pt}
+
+\setlength{\parindent}{0.0cm}
+\textbf{3.4 Đánh giá kết quả.}
+\setlength{\parindent}{1.0cm}
+
+\smallskip
+\changefontsizes{13pt}
+
+%fill here
+Từ những thực nghiệm đã được nêu như trên có thể rút ra đánh giá cho bài báo cáo là cơ bản hoàn thành các yêu cầu của đồ án. Bài báo cáo đã test qua nhiều testcase khác nhau và chính xác ở mọi trường hợp được test. Phương pháp quy hoạch động cũng được chỉ ra ở phần code trên. Vì vậy, đây có thể coi là kết quả tương đối tốt cho bài báo cáo này, hoàn thành không chỉ yêu cầu về mặt kết quả mà còn về mặt thuật toán.
+%
+
+

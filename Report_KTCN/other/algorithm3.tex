@@ -1,0 +1,39 @@
+
+\begin{minipage}{.9\linewidth}
+	\begin{algorithm}[H]
+		\SetKwInOut{Input}{Đầu vào}
+		\SetKwInOut{Output}{Đầu ra}
+		\SetKwProg{Algorithm}{function inf\_tree}{}{}
+		\Algorithm{$(str, crr\_val)$}
+		{ 
+			\Input{1 chuỗi lưu các node và 1 biến lưu giá trị}
+			\Output{Giá trị cuối cùng của chuyến dạo chơi}
+			
+			\If{$str$\textbf{.isEmpty()}}
+			{\textbf{return} $crr\_val$;}
+			
+			$crr\_pos \leftarrow str[0]$;\\
+			$str.Remove(str[0])$
+			
+			\If{$crr\_pos = $ 'P'}
+			{
+				\textbf{return} inf\_tree($str, crr\_val$);}
+			\ElseIf{$crr\_pos = $ 'L'}{
+				\textbf{return} inf\_tree($str, crr\_val \times 2$);
+			}
+			\ElseIf{$crr\_pos = $ 'R'}{
+				\textbf{return} inf\_tree($str, crr\_val \times 2 + 1$);
+			}
+			\ElseIf{$crr\_pos = $ '*'}{
+				$P \leftarrow $inf\_tree($str, crr\_val$);\\
+				$L \leftarrow $inf\_tree($str, crr\_val \times 2$);\\
+				$R \leftarrow $inf\_tree($str, crr\_val \times 2 + 1$);\\
+				\textbf{return} $P + L + R$;
+			}
+			
+		}
+		\caption{Cây nhị phân vô hạn}
+		\label{alg:algorithm1}
+	\end{algorithm}
+\end{minipage}
+

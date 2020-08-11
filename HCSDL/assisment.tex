@@ -1,0 +1,1830 @@
+\documentclass{report}
+\usepackage{textcase}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[utf8]{vietnam}
+\usepackage{graphicx}
+\usepackage{scrextend}
+\usepackage[left=3.5cm,right=2cm,top=3.5cm,bottom=3cm]{geometry}
+\usepackage{xhfill}
+\usepackage{floatrow}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{lettrine}
+\usepackage[
+    backend=biber,
+    style=authoryear,
+    natbib=true,
+    url=true, 
+    doi=true,
+    eprint=false
+]{biblatex}
+\usepackage{hyperref} 
+\addbibresource{myref.bib}
+
+\begin{document}
+\newcommand{\xfill}[2][1ex]{{%
+  \dimen0=#2\advance\dimen0 by #1
+  \leaders\hrule height \dimen0 depth -#1\hfill%
+}}
+
+%Page 1
+\changefontsizes[14pt]{12pt}
+\centerline{TỔNG LIÊN ĐOÀN LAO ĐỘNG VIỆT NAM}
+
+\changefontsizes[14pt]{11pt}
+\centerline{\textbf{TRƯỜNG ĐẠI HỌC TÔN ĐỨC THẮNG}}
+\centerline{\textbf{KHOA CÔNG NGHỆ THÔNG TIN}}
+
+\begin{center}
+    \begin{figure}[htp]
+    \begin{center}
+     \includegraphics[scale=.2]{logo}
+    \end{center}
+    \end{figure}
+\end{center}
+
+\changefontsizes{16pt}
+\centerline{\textbf{BÀI TẬP LỚN: HỆ CƠ SỞ DỮ LIỆU}}
+\vspace{1.5cm}
+\changefontsizes{24pt}
+\centerline{\textbf{ĐỀ 1}}
+
+\vspace{4cm}
+\begin{flushright}
+\renewcommand{\baselinestretch}{0.05}
+\changefontsizes{14pt}
+\textit{Người hướng dẫn: }\textbf{G.V Trần Thị Hồng Nhung}
+\setlength{\parskip}{0.5em}
+
+\textit{Người thực hiện: }\textbf{Trần Quốc Lĩnh - 51703124}
+\setlength{\parskip}{0.5em}
+
+\textit{Người thực hiện: }\textbf{Lê Đăng Đức - 51703059}
+\setlength{\parskip}{0.5em}
+
+Lớp: \textbf{17050301}
+\setlength{\parskip}{0.5em}
+
+Khoá: \textbf{21}
+\setlength{\parskip}{0.5em}
+
+\end{flushright}
+
+\vspace{1cm}
+\changefontsizes{14pt}
+\centerline{\textbf{THÀNH PHỐ HỒ CHÍ MINH, NĂM 2019}}
+
+
+%Page 2
+\newpage
+\changefontsizes[14pt]{12pt}
+\centerline{TỔNG LIÊN ĐOÀN LAO ĐỘNG VIỆT NAM}
+
+\changefontsizes[14pt]{11pt}
+\centerline{\textbf{TRƯỜNG ĐẠI HỌC TÔN ĐỨC THẮNG}}
+\centerline{\textbf{KHOA CÔNG NGHỆ THÔNG TIN}}
+
+\begin{center}
+    \begin{figure}[htp]
+    \begin{center}
+     \includegraphics[scale=.2]{logo}
+    \end{center}
+    \end{figure}
+\end{center}
+
+\changefontsizes{16pt}
+\centerline{\textbf{BÀI TẬP LỚN: HỆ CƠ SỞ DỮ LIỆU}}
+\vspace{1.5cm}
+\changefontsizes{24pt}
+\centerline{\textbf{ĐỀ 1}}
+
+\vspace{4cm}
+\begin{flushright}
+\renewcommand{\baselinestretch}{0.05}
+\changefontsizes{14pt}
+\textit{Người hướng dẫn: }\textbf{G.V Trần Thị Hồng Nhung}
+\setlength{\parskip}{0.5em}
+
+\textit{Người thực hiện: }\textbf{Trần Quốc Lĩnh - 51703124}
+\setlength{\parskip}{0.5em}
+
+\textit{Người thực hiện: }\textbf{Lê Đăng Đức - 51703059}
+\setlength{\parskip}{0.5em}
+
+Lớp: \textbf{17050301}
+\setlength{\parskip}{0.5em}
+
+Khoá: \textbf{21}
+\setlength{\parskip}{0.5em}
+
+\end{flushright}
+
+\vspace{1cm}
+\changefontsizes{14pt}
+\centerline{\textbf{THÀNH PHỐ HỒ CHÍ MINH, NĂM 2019}}
+
+
+% Page 3
+\newpage
+\changefontsizes{16pt}
+\centerline{\textbf{LỜI CẢM ƠN}}
+
+\changefontsizes{13pt}
+\bigskip
+\setlength{\parindent}{2cm}
+
+Cảm ơn cô đã dạy môn hệ cơ sở dữ liệu hết sức nhiệt tình và tâm huyết, cảm ơn cô đã định hướng và tạo cơ sở để em có thể tự tìm hiểu và học thêm về xây dựng một hệ thống cơ sở dữ liệu.
+
+Còn đây là bài tập lớn, một nội dung trong trương trình giảng dạy mà cô đã giao cho em. Trong quá trình làm bài tập lớn này, em vẫn còn nhiều thiếu sót. Em rất mong nhận được sự đánh giá và chỉ bảo từ cô!
+    
+% Page 4
+\newpage
+\changefontsizes{16pt}
+\centerline{\textbf{BÀI TẬP LỚN ĐƯỢC HOÀN THÀNH}}
+\centerline{\textbf{TẠI TRƯỜNG ĐẠI HỌC TÔN ĐỨC THẮNG}}
+\changefontsizes{13pt}
+\vspace{1cm}
+\setlength{\parindent}{2cm}
+Em xin cam đoan đây là sản phẩm bài tập lớn của riêng em. Các nội dung nghiên cứu, kết quả trong đề tài này là trung thực và chưa công bố dưới bất kỳ hình thức nào trước đây. Những số liệu ,hình ảnh được chính em thu thập từ các nguồn khác nhau có ghi rõ trong phần tài liệu tham khảo.
+
+\setlength{\parindent}{2cm}
+Ngoài ra, trong bài tiểu luận còn sử dụng một số nhận xét, đánh giá cũng như số liệu của các tác giả khác, cơ quan tổ chức khác đều có trích dẫn và chú thích nguồn gốc.
+
+\setlength{\parindent}{2cm}
+Nếu phát hiện có bất kỳ sự gian lận nào em xin hoàn toàn chịu trách nhiệm về nội dung bài tập lớn của mình. Trường đại học Tôn Đức Thắng không liên quan đến những vi phạm tác quyền, bản quyền do em gây ra trong quá trình thực hiện (nếu có).
+
+\vspace{0.75cm}
+\begin{flushright}
+\renewcommand{\baselinestretch}{0.05}
+\changefontsizes{13pt}
+\textit{TP. Hồ Chí Minh, ngày 23 tháng 04 năm 2019}
+\end{flushright}
+
+\setlength{\parindent}{12cm}
+\textit{Tác giả 1}\\
+
+\setlength{\parindent}{12cm}
+\textit{(Đã ký)}\\
+
+\setlength{\parindent}{11.25cm}
+\textit{Trần Quốc Lĩnh}\\
+
+\setlength{\parindent}{12cm}
+\textit{Tác giả 2}\\
+
+\setlength{\parindent}{12cm}
+\textit{(Đã ký)}\\
+
+\setlength{\parindent}{11.5cm}
+\textit{Lê Đăng Đức}\\
+
+% Page 5
+\newpage
+\changefontsizes{16pt}
+\centerline{\textbf{PHẦN XÁC NHẬN VÀ ĐÁNH GIÁ CỦA GIẢNG VIÊN}}
+\bigskip
+\changefontsizes{13pt}
+\setlength{\parindent}{2.2cm}
+Phần xác nhận của GV hướng dẫn
+
+\vspace{0.8cm}
+\setlength{\parindent}{1cm}
+\ \xfill{1pt} \
+
+\bigskip
+\ \xfill{1pt} \
+
+\bigskip
+\ \xfill{1pt} \
+
+\bigskip
+\ \xfill{1pt} \
+
+\bigskip
+\ \xfill{1pt} \
+
+\bigskip
+\ \xfill{1pt} \
+
+\changefontsizes{12pt}
+\setlength{\parindent}{8cm}
+Tp. Hồ Chí Minh, ngày 23 tháng 04 năm 2019
+
+\setlength{\parindent}{11cm}
+\textit{(kí và ghi họ tên)}
+
+\changefontsizes{13pt}
+\vspace{2.5cm}
+\setlength{\parindent}{2.2cm}
+Phần đánh giá của GV chấm bài
+
+\vspace{0.8cm}
+\setlength{\parindent}{1cm}
+\ \xfill{1pt} \
+
+\bigskip
+\ \xfill{1pt} \
+
+\bigskip
+\ \xfill{1pt} \
+
+\bigskip
+\ \xfill{1pt} \
+
+\bigskip
+\ \xfill{1pt} \
+
+\bigskip
+\ \xfill{1pt} \
+
+\changefontsizes{12pt}
+\setlength{\parindent}{8cm}
+Tp. Hồ Chí Minh, ngày 23 tháng 04 năm 2019
+
+\setlength{\parindent}{11cm}
+\textit{(kí và ghi họ tên)}
+
+% Page 6
+\newpage
+\changefontsizes{16pt}
+\centerline{\textbf{TÓM TẮT}}\
+
+\changefontsizes{13pt}
+\setlength{\parindent}{2cm}
+
+Bài tiểu luận này mô tả lại làm bài tập lớn môn hệ cơ sở dữ liệu. Gồm các phần:
+
+\setlength{\parindent}{2.5cm}
+- Tạo CSDL Trên SQL Server.
+
+- Store procedure, function, trigger.
+
+- Thao tác cơ sở dữ liệu.
+
+- Phân quyền truy cập.
+
+
+
+
+%Page 7
+\newpage
+\changefontsizes{16pt}
+\centerline{\textbf{MỤC LỤC}}\
+
+\vspace{1.2cm}
+\changefontsizes{14pt}
+\setlength{\parindent}{0cm}
+LỜI CẢM ƠN\dotfill\ 3
+
+\smallskip
+CAM KẾT\dotfill\ 4
+
+\smallskip
+ĐÁNH GIÁ CỦA GIÁO VIÊN\dotfill\ 5
+
+\smallskip
+TÓM TẮT\dotfill\ 6
+
+\smallskip
+MỤC LỤC\dotfill\ 7
+
+\smallskip
+DANH MỤC CHÚ THÍCH CÁC THUẬT NGỮ VÀ HÌNH ẢNH\dotfill\ 8
+
+\smallskip
+PHẦN 1: TẠO CSDL TRÊN SQL SERVER\dotfill\ 9
+
+\setlength{\parindent}{0.5cm}
+I. Tạo bảng dữ liệu với các thuộc tính và ràng buộc\dotfill\ 9
+
+II. Tạo Index\dotfill\ 15
+
+\setlength{\parindent}{0cm}
+PHẦN 2: STORE PROCEDURE, FUNCTION, TRIGGER\dotfill\ 16
+
+\setlength{\parindent}{0.5cm}
+I. Store Procedure/Function\dotfill\ 16
+
+II. Trigger\dotfill\ 17
+
+\setlength{\parindent}{0cm}
+PHẦN 3: THAO TÁC CƠ SỞ DỮ LIỆU \dotfill\ 19
+
+\setlength{\parindent}{0.5cm}
+I. Insert\dotfill\ 19
+
+II. Update\dotfill\ 19
+
+III. Delete\dotfill\ 19
+
+IV.  Select\dotfill\ 19
+
+\setlength{\parindent}{0cm}
+PHẦN 4: PHÂN QUYỀN TRUY CẬP \dotfill\ 21
+
+\setlength{\parindent}{0.5cm}
+I. Tạo user\dotfill\ 21
+
+II. Phân quyền truy cập, sử dụng\dotfill\ 21
+
+
+\setlength{\parindent}{0cm}
+\smallskip
+TÀI LIỆU THAM KHẢO\dotfill\ 27
+
+%Page 8
+\newpage
+\changefontsizes{16pt}
+\centerline{\textbf{DANH MỤC CHÚ THÍCH CÁC THUẬT NGỮ}}
+\centerline{\textbf{VÀ HÌNH ẢNH}}
+
+\vspace{1cm}
+\changefontsizes{14pt}
+\textbf{Thuật ngữ}
+
+
+\changefontsizes{14pt}
+\bigskip
+\textbf{Hình ảnh}
+
+\bigskip
+\changefontsizes{13pt}
+
+
+%Page ??
+\newpage
+\changefontsizes{16pt}
+\centerline{\textbf{PHẦN 1: TẠO CSDL TRÊN SQL SERVER}}
+
+\bigskip
+\changefontsizes{13pt}
+\setlength{\parindent}{2cm}
+create database QLSHOW
+
+use QLSHOW
+
+\bigskip
+\setlength{\parindent}{0cm}
+I. Tạo bảng dữ liệu với các thuộc tính và ràng buộc
+
+\setlength{\parindent}{0.5cm}
+
+create table Nguoi (
+	
+	\setlength{\parindent}{1.5cm}
+	ID char(12) not null CHECK ((len(ID) like 12 and (left(right(ID,10),4) between 2000 and 3000)) and 
+	(right(ID,6) like '[0-9][0-9][0-9][0-9][0-9][0-9]') and (left(ID, 2) like '[A-Z][A-Z]')) PRIMARY KEY,
+	
+	CMND varchar(12),
+	
+	Ten nvarchar(100),
+	
+	GioiTinh bit,
+	
+	NgaySinh date check(NgaySinh LIKE 'DD-MM-YYYY'),
+	
+	NoiSinh nvarchar(100)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table ThiSinh(
+
+	\setlength{\parindent}{1.5cm}
+	MaThiSinh char(12) references Nguoi(ID) check(left(MaThiSinh,2) like 'TS'),
+	
+	DiaChi char(100),
+	
+	DienThoai char(20) unique,
+	
+	GioiThieu ntext,
+	
+	primary key(MaThiSinh)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table NgheSy(
+
+	\setlength{\parindent}{1.5cm}
+	MaNgheSy char(12) references Nguoi(ID) check (left(MaNgheSy,2) like 'NS'),
+	
+	NgheDanh nvarchar(100),
+	
+	ThanhTich ntext,
+	
+	MCFlag bit,
+	
+	CSFlag bit,
+	
+	NSFlag bit,
+	
+	primary key(MaNgheSy)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table ChuongTrinhMCDan (
+
+	\setlength{\parindent}{1.5cm}
+	MaMC char(12) references NgheSy(MaNgheSy),
+	
+	ChuongTrinhDaDan varchar(400),
+	
+	primary key(MaMC, ChuongTrinhDaDan)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table AlbumCaSy (
+
+	\setlength{\parindent}{1.5cm}
+	MaCaSy char(12) references NgheSy(MaNgheSy),
+	
+	Album nvarchar(100),
+	
+	primary key(MaCaSy,Album)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table BaiHat (
+
+	\setlength{\parindent}{1.5cm}
+	MaBaiHat char(8) check(left(MaBaiHat,2) like 'BH' and right(MaBaiHat,6) like '[0-9][0-9][0-9][0-9][0-9][0-9]'),
+	
+	TuaBaiHat nvarchar(100) not null,
+	
+	primary key(MaBaiHat)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table TheLoai (
+
+	\setlength{\parindent}{1.5cm}
+	MaTheLoai char(5) check(left(MaTheLoai,2) like 'TL' and right(MaTheLoai,3) like '[0-9][0-9][0-9]'),
+	
+	TenTheLoai nvarchar(100) not null unique,
+	
+	primary key(MaTheLoai)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table BaiHatThuocTheLoai (
+
+	\setlength{\parindent}{1.5cm}
+	MaBaiHat char(8) references BaiHat(MaBaiHat),
+	
+	MaTheLoai char(5) references TheLoai(MaTheLoai),
+	
+	PRIMARY KEY (MaBaiHat, MaTheLoai)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table NhacSySangTac (
+
+	\setlength{\parindent}{1.5cm}
+	MaNhacSy char(12) references NgheSy(MaNgheSy),
+	
+	MaBaiHat char(8) references BaiHat(MaBaiHat),
+	
+	ThongTinSangTac char(1) check(ThongTinSangTac = '1' or ThongTinSangTac = '2' or ThongTinSangTac = '3'),
+	
+	PRIMARY KEY (MaNhacSy, MaBaiHat)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table TinhThanh (
+
+	\setlength{\parindent}{1.5cm}
+	MaTinhThanh char(4) check(left(MaTinhThanh,2) like 'TT' and right(MaTinhThanh,2) like '[0-9][0-9]'),
+	
+	TenTinhThanh nvarchar(100) not null unique,
+	
+	primary key(MaTinhThanh)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table NhaSanXuat (
+
+	\setlength{\parindent}{1.5cm}
+	MaNhaSanXuat char(6) check(left(MaNhaSanXuat,3) like 'NSX' and right(MaNhaSanXuat,3) like '[0-9][0-9][0-9]'),
+	
+	TenNhaSanXuat nvarchar(100),
+	
+	primary key(MaNhaSanXuat)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table KenhTruyenHinh(
+
+	\setlength{\parindent}{1.5cm}
+	MaKenh char(5) check(left(MaKenh,2) like 'TH' and right(MaKenh,3) like '[0-9][0-9][0-9]'),
+	
+	TenKenh nvarchar(100) not null,
+	
+	primary key(MaKenh)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table MuaThi (
+
+	\setlength{\parindent}{1.5cm}
+	MaMuaThi char(10) check(left(MaMuaThi,2) like 'MT' and right(MaMuaThi,8) like '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
+	
+	NgayThangNamBatDau date,
+	
+	NgayThangNamKetThuc date,
+	
+	GiaiThuong ntext,
+	
+	DiaDiemVongNhaHat nvarchar(300),
+	
+	DiaDiemVongBanKet nvarchar(300),
+	
+	DiaDiemVongGala nvarchar(300),
+	
+	MaGiamDocAmNhac char(12) references Nguoi(ID),
+	
+	MaGiamKhao1 char(12) references Nguoi(ID),
+	
+	MaGiamKhao2 char(12) references Nguoi(ID),
+	
+	MaGiamKhao3 char(12) references Nguoi(ID),
+	
+	MaMC char(12) references NgheSy(MaNgheSy)
+	
+	primary key(MaMuaThi)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table GiuBanQuyenMuaThi (
+
+	\setlength{\parindent}{1.5cm}
+	MaMuaThi char(10) references MuaThi(MaMuaThi),
+	
+	MaNhaSanXuat char(6) references NhaSanXuat(MaNhaSanXuat),
+	
+	PRIMARY KEY (MaMuaThi, MaNhaSanXuat)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table PhatSong(
+
+	\setlength{\parindent}{1.5cm}
+	MaMuaThi char(10) references MuaThi(MaMuaThi),
+	
+	MaKenh char(5) references KenhTruyenHinh(MaKenh),
+	
+	ThongTinPhatSong char(3) check(ThongTinPhatSong = '1' or ThongTinPhatSong = '2'  or ThongTinPhatSong = '3'),
+	
+	PRIMARY KEY (MaMuaThi, MaKenh)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table VONGTHI (
+
+	\setlength{\parindent}{1.5cm}
+	STTVongThi int identity(1,1) unique,
+	
+	MaMuaThi char(10) references MuaThi(MaMuaThi),
+	
+	TenVT nvarchar(50),
+	
+	TGBatDau date, -- check(TGBatDau = 'DD-MM-YYYY HH:MI'),
+	
+	TGKetThuc date,-- check(TGKetThuc = 'DD-MM-YYYY HH:MI' and TGKetThuc>TGBatDau),
+	
+	LoaiVT char(1) check(LoaiVT like '[1-4]'),
+	
+	primary key(STTVongThi,MaMuaThi)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table TS\_THAMGIA\_VT (
+
+	\setlength{\parindent}{1.5cm}
+	STTVongThi int identity references VONGTHI(STTVongThi),
+	
+	MaMuaThi char(10) references MuaThi(MaMuaThi),
+	
+	MaThiSinh char(12) references ThiSinh(MaThiSinh),
+	
+	KetQua tinyint check(KetQua between -1 and 3) default -1,
+	
+	primary key(STTVongThi,MaMuaThi,MaThiSinh)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table VONG\_THUGIONG (
+
+	\setlength{\parindent}{1.5cm}
+	STTVongThi int identity unique references VONGTHI(STTVongThi),
+	
+	MaMuaThi char(10) unique references MuaThi(MaMuaThi),
+	
+	MaTinhThanh char(5) not null,  
+	
+	DiaDiem nvarchar(50) not null,
+	
+	primary key(STTVongThi,MaMuaThi)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table TS\_THAMGIA\_VTG (
+
+	\setlength{\parindent}{1.5cm}
+	STTVongThi int identity unique references VONG\_THUGIONG(STTVongThi),
+	
+	MaMuaThi char(10) references VONG\_THUGIONG(MaMuaThi),
+	
+	MaThiSinh char(12) references ThiSinh(MaThiSinh),
+	
+	GK1 bit not null,
+	
+	GK2 bit not null,
+	
+	GK3 bit not null,
+	
+	primary key(STTVongThi,MaMuaThi,MaThiSinh)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table TS\_HATTAI\_VTG (
+
+	\setlength{\parindent}{1.5cm}
+	STTVongThi int identity references VONG\_THUGIONG(STTVongThi),
+	
+	MaMuaThi char(10) references VONG\_THUGIONG(MaMuaThi),
+	
+	MaThiSinh char(12) references ThiSinh(MaThiSinh),
+	
+	MaBaiHat char(8) references BaiHat(MaBaiHat),
+	
+	primary key(STTVongThi,MaMuaThi,MaThiSinh,MaBaiHat)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+
+create table VONG\_NHAHAT (
+
+	\setlength{\parindent}{1.5cm}
+	STTVongThi int unique identity references VONGTHI(STTVongThi),
+	
+	MaMuaThi char(10) UNIQUE references MuaThi(MaMuaThi),
+	
+	HatNhomFlag bit not null,
+	
+	primary key(STTVongThi,MaMuaThi)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+
+create table TS\_HATTAI\_VNH (
+
+	\setlength{\parindent}{1.5cm}
+	STTVongThi int identity references VONG\_NHAHAT(STTVongThi),
+	
+	MaMuaThi char(10) references VONG\_NHAHAT(MaMuaThi),
+	
+	MaThiSinh char(12) references ThiSinh(MaThiSinh),
+	
+	MaBaiHat char(8) references BaiHat(MaBaiHat),
+	
+	primary key(STTVongThi,MaMuaThi,MaThiSinh,MaBaiHat)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table NHOMCA (
+
+	\setlength{\parindent}{1.5cm}
+	MaNhom char(8) check(left(MaNhom,2) like 'NC' and left(right(MaNhom,6),4) between 2000 and 3000 and right(MaNhom,2) like '[0-9][0-9]'),
+	
+	TenNhom nvarchar(50),
+	
+	MaTS1 char(12) references ThiSinh(MaThiSinh),
+	
+	MaTS2 char(12) references ThiSinh(MaThiSinh),
+	
+	MaTS3 char(12) references ThiSinh(MaThiSinh),
+	
+	
+	MaTS4 char(12) references ThiSinh(MaThiSinh),
+	
+	primary key(MaNhom) 
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table NHOMCA\_HATBH (
+
+	\setlength{\parindent}{1.5cm}
+	MaNhom char(8) references NHOMCA(MaNhom),
+	
+	MaBaiHat char(8) references BaiHat(MaBaiHat),
+	
+	STTVongThi int identity references VONG\_NHAHAT(STTVongThi),
+	
+	MaMuaThi char(10) references VONG\_NHAHAT(MaMuaThi),
+	
+	primary key(MaNhom,MaBaiHat)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table VONG\_BANKET (
+
+	\setlength{\parindent}{1.5cm}
+	STTVongThi int unique identity references VONGTHI(STTVongThi),
+	
+	MaMuaThi char(10) unique references MuaThi(MaMuaThi),
+	
+	Nam\_Nu tinyint check (Nam\_Nu between -1 and 1) default -1,
+	
+	primary key(STTVongThi,MaMuaThi)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table TS\_THAMGIA\_VBK (
+
+	\setlength{\parindent}{1.5cm}
+	STTVongThi int unique identity references VONG\_BANKET(STTVongThi),
+	
+	MaMuaThi char(10) unique references VONG\_BANKET(MaMuaThi),
+	
+	MaThiSinh char(12) unique references ThiSinh(MaThiSinh),
+	
+	MSBC char(5) unique not null,
+	
+	TSTN int unique not null,
+	
+	primary key(STTVongThi,MaMuaThi,MaThiSinh)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table TS\_HATTAI\_VBK (
+
+	\setlength{\parindent}{1.5cm}
+	MaThiSinh char(12) references TS\_THAMGIA\_VBK(MaThiSinh),
+	
+	MaBaiHat char(8) references BaiHat(MaBaiHat),
+	
+	STTVongThi int identity not null references VONG\_BANKET(STTVongThi),
+	
+	MaMuaThi char(10) not null references VONG\_BANKET(MaMuaThi),
+	
+	primary key(MaThiSinh,MaBaiHat)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table VONG\_GALA (
+
+	\setlength{\parindent}{1.5cm}
+	STTVongThi int unique identity references VONGTHI(STTVongThi),
+	
+	MaMuaThi char(10) unique references MuaThi(MaMuaThi),
+	
+	ChuDe nvarchar(30) unique not null,
+	
+	MaNguoiHD char(12) references NgheSy(MaNgheSy),
+	
+	HatDoiFlag bit,
+	
+	primary key(STTVongThi,MaMuaThi)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table TS\_THAMGIA\_VGL (
+
+	\setlength{\parindent}{1.5cm}
+	STTVongThi int identity unique references VONG\_GALA(STTVongThi),
+	
+	MaMuaThi char(10) unique references VONG\_GALA(MaMuaThi),
+	
+	MaThiSinh char(12) unique references ThiSinh(MaThiSinh),
+	
+	MSBC char(5) not null unique,
+	
+	TSTN int not null unique,
+	
+	primary key(STTVongThi,MaMuaThi,MaThiSinh)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+
+create table TS\_HATTAI\_VGL (
+
+	\setlength{\parindent}{1.5cm}
+	MaThiSinh char(12) references TS\_THAMGIA\_VGL(MaThiSinh),
+	
+	MaBaiHat char(8) references BaiHat(MaBaiHat),
+	
+	STTVongThi int identity not null references VONG\_GALA(STTVongThi),
+	
+	MaMuaThi char(10) not null references VONG\_GALA(MaMuaThi),
+	
+	primary key(MaThiSinh,MaBaiHat)
+	
+	\setlength{\parindent}{0.5cm}
+)
+
+\bigskip
+\setlength{\parindent}{0cm}
+II. Tạo Index
+
+\setlength{\parindent}{0.5cm}
+create index traCuuVongThi on VONGTHI(LoaiVT) 
+
+create index ThongTinThiSinh on Nguoi(CMND)
+
+create index ThongTinMuaGiai on MuaThi(NgayThangNamBatDau)
+
+\bigskip
+
+\newpage
+\changefontsizes{16pt}
+\centerline{\textbf{PHẦN 2: STORE PROCEDURE, FUNCTION, TRIGGER}}
+
+\changefontsizes{13pt}
+\bigskip
+\setlength{\parindent}{0cm}
+I. Store Procedure/Function 
+
+1)
+
+\setlength{\parindent}{0.5cm}
+create function MinSTTVongThi(@MaMuaGiai char(10), @LoaiVT char(1))
+
+returns int
+
+as 
+
+begin
+
+	\setlength{\parindent}{1.5cm}
+	declare @minSTTVongThi int;
+	
+	select @minSTTVongThi = min(STTVongThi) from VONGTHI where MaMuaThi = @MaMuaGiai and LoaiVT = @LoaiVT
+	
+	return @minSTTVongThi
+	
+	\setlength{\parindent}{0.5cm}
+end
+
+\bigskip
+
+create function MaxSTTVongThi(@MaMuaGiai char(10), @LoaiVT char(1))
+
+returns int
+
+as 
+
+begin
+	
+	\setlength{\parindent}{1.5cm}
+	
+	declare @maxSTTVongThi int;
+	
+	select @maxSTTVongThi = max(STTVongThi) from VONGTHI where MaMuaThi = @MaMuaGiai and LoaiVT = @LoaiVT
+	
+	return @maxSTTVongThi
+	
+	\setlength{\parindent}{0.5cm}
+end
+
+\bigskip
+\setlength{\parindent}{0cm}
+2)
+
+create proc CapNhatKetQuaThuGiong (@STTVongThi int, @MaMuaThi char(10), @MaThiSinh char(12))
+as
+begin
+	
+	\setlength{\parindent}{1.5cm}
+	declare @gk1 bit;
+	
+	declare @gk2 bit;
+	
+	declare @gk3 bit;
+	
+	select @gk1 = GK1
+	
+	from TS\_THAMGIA\_VTG
+	
+	where STTVongThi = @STTVongThi and MaMuaThi = @MaMuaThi and MaThiSinh = @MaThiSinh;
+	
+	select @gk2 = GK2
+	
+	from TS\_THAMGIA\_VTG
+	
+	where STTVongThi = @STTVongThi and MaMuaThi = @MaMuaThi and MaThiSinh = @MaThiSinh;
+	
+	select @gk3 = GK3
+	
+	from TS\_THAMGIA\_VTG
+	
+	where STTVongThi = @STTVongThi and MaMuaThi = @MaMuaThi and MaThiSinh = @MaThiSinh;
+	
+	\smallskip
+	if ((@gk1 = 1 and @gk2 = 1) or (@gk1 = 1 and @gk3 = 1) or (@gk2 = 1 and @gk3 = 1))
+	
+		\setlength{\parindent}{2.5cm}
+		update TS\_THAMGIA\_VT
+		
+		set KetQua = 1
+		
+		where STTVongThi = @STTVongThi and MaMuaThi = @MaMuaThi and MaThiSinh = @MaThiSinh 
+		
+		\setlength{\parindent}{1.5cm}
+	else
+	
+		\setlength{\parindent}{2.5cm}
+		update TS\_THAMGIA\_VT
+		
+		set KetQua = 0
+		
+		where STTVongThi = @STTVongThi and MaMuaThi = @MaMuaThi and MaThiSinh = @MaThiSinh
+	
+	\setlength{\parindent}{0.5cm}
+end
+
+\bigskip
+
+\setlength{\parindent}{0cm}
+II. Trigger 
+
+1)
+
+\setlength{\parindent}{0.5cm}
+create trigger insertThiSinh
+
+on ThiSinh
+
+for insert, update
+
+as
+
+begin
+	
+	\setlength{\parindent}{1.5cm}
+	declare @Tuoi int;
+	
+	declare @NgaySinh date;
+	
+	declare @NgayBatDauMuaThi char(4);
+	
+	declare @MaThiSinh char(12);
+	
+	select @NgaySinh = NgaySinh from Nguoi where ID in (select inserted.MaThiSinh from inserted); 
+	
+	select @MaThiSinh = MaThiSinh from inserted;
+	
+	set @NgayBatDauMuaThi = left(right(@MaThiSinh,10), 4);
+	
+	set @Tuoi = YEAR(@NgaySinh) - year(convert(date, @NgayBatDauMuaThi));
+	
+	if (@Tuoi > 30 or @Tuoi < 15)
+	
+	begin
+	
+		\setlength{\parindent}{2.5cm}
+		print 'Tuoi khong hop le';
+		
+		rollback
+	
+	\setlength{\parindent}{1.5cm}
+	end
+	
+	\setlength{\parindent}{0.5cm}
+end
+
+\bigskip
+
+create trigger ChuaTungVaoGaLa
+
+on ThiSinh
+
+for insert
+
+as
+
+begin
+	
+	\setlength{\parindent}{1.5cm}
+	declare @MaThiSinh char(12);
+	
+	select @MaThiSinh = MaThiSinh from inserted
+
+	if not exists(select * from TS\_THAMGIA\_VGL where MaThiSinh like @MaThiSinh)
+	
+	\setlength{\parindent}{2.5cm}
+		print 'Thi sinh chua tung vao vong gala'
+		
+	\setlength{\parindent}{0.5cm}	
+end
+
+\bigskip
+2)
+
+
+		
+\setlength{\parindent}{0.5cm}	
+create trigger checkConflict\_VBK
+
+on	TS\_THAMGIA\_VBK
+
+for insert
+
+as
+
+begin
+
+	\setlength{\parindent}{1.5cm}	
+	declare @MaBC char(12);
+	
+	select @MaBC = MSBC from inserted
+	
+	if not exists (select * from TS\_THAMGIA\_VBK where @MaBC like MSBC)
+	
+	begin
+	
+		\setlength{\parindent}{2.5cm}
+		print 'Ma binh chon bi trung lap'
+		
+		rollback
+	
+		
+	\setlength{\parindent}{1.5cm}		
+	end
+		
+	\setlength{\parindent}{0.5cm}	
+end
+
+\bigskip
+
+create trigger checkConflict\_VGL
+
+on	TS\_THAMGIA\_VGL 
+
+for insert
+
+as
+
+begin
+
+	\setlength{\parindent}{1.5cm}
+	declare @MaBC char(12);
+	
+	select @MaBC = MSBC from inserted
+	
+	if not exists (select * from TS\_THAMGIA\_VGL where @MaBC like MSBC)
+	
+	begin
+	
+		\setlength{\parindent}{2.5cm}
+		print 'Ma binh chon bi trung lap'
+		
+		rollback
+		
+	\setlength{\parindent}{1.5cm}
+	end
+	
+	\setlength{\parindent}{0.5cm}	
+end
+
+
+
+
+\newpage
+\changefontsizes{16pt}
+\centerline{\textbf{PHẦN 3: THAO TÁC CƠ SỞ DỮ LIỆU }}
+
+\bigskip
+\changefontsizes{13pt}
+\setlength{\parindent}{0cm}
+I. Insert
+
+- Trong file .sql
+
+\bigskip
+\changefontsizes{13pt}
+\setlength{\parindent}{0cm}
+II. Update
+
+\setlength{\parindent}{0.5cm}
+update TS\_THAMGIA\_VGL
+
+set TSTN = 10000
+
+where MaThiSinh = 'TS2012000001' and  STTVongThi = (Select STTVongThi from VONGTHI where TenVT = 'gala 1') and left(right(MaMuaThi, 8), 4) = '2012'
+
+
+\bigskip
+\changefontsizes{13pt}
+\setlength{\parindent}{0cm}
+III. Delete
+
+\setlength{\parindent}{0.5cm}
+delete from ThiSinh
+where MaThiSinh = 'TS2012000001'
+
+
+\bigskip
+\changefontsizes{13pt}
+\setlength{\parindent}{0cm}
+IV.  Select 
+
+a)
+
+\setlength{\parindent}{0.5cm}
+select CMND, Ten, NoiSinh, DienThoai
+
+from Nguoi, ThiSinh
+
+where Nguoi.ID = ThiSinh.MaThiSinh and  MaThiSinh in (Select MaThiSinh
+
+from TS\_THAMGIA\_VGL where TSTN in (Select max(TSTN)
+
+from TS\_THAMGIA\_VGL)) and left(right(MaThiSinh, 10),4) like '2012'
+
+\setlength{\parindent}{0cm}
+\bigskip
+b)
+
+\setlength{\parindent}{0.5cm}
+select top 1 MuaThi.MaMuaThi, year(NgayThangNamBatDau) as NamBatDau, year(NgayThangNamKetThuc) as NamKetThuc, sum(TSTN) as TongSoTinNhan
+
+from MuaThi, TS\_THAMGIA\_VBK
+
+where MuaThi.MaMuaThi = TS\_THAMGIA\_VBK.MaMuaThi
+
+group by MuaThi.MaMuaThi, year(NgayThangNamBatDau),\\year(NgayThangNamKetThuc)
+
+order by sum(TSTN) DESC
+
+\bigskip
+
+\setlength{\parindent}{0.5cm}
+select top 1 MuaThi.MaMuaThi, year(NgayThangNamBatDau) as NamBatDau, year(NgayThangNamKetThuc) as NamKetThuc, sum(TSTN) as TongSoTinNhan
+
+from MuaThi, TS\_THAMGIA\_VGL
+
+where MuaThi.MaMuaThi = TS\_THAMGIA\_VGL.MaMuaThi
+
+group by MuaThi.MaMuaThi, year(NgayThangNamBatDau),\\year(NgayThangNamKetThuc)
+
+order by sum(TSTN) DESC
+
+\setlength{\parindent}{0cm}
+\bigskip
+c)
+
+\setlength{\parindent}{0.5cm}
+select top 1 CMND, Ten, NoiSinh, DienThoai, count(CMND) as SoLanThamGia
+
+from Nguoi, ThiSinh
+
+where Nguoi.ID = ThiSinh.MaThiSinh
+
+Group by CMND, Ten, NoiSinh, DienThoai
+
+order by count(CMND) DESC
+
+\newpage
+\changefontsizes{16pt}
+\centerline{\textbf{PHẦN 4: PHÂN QUYỀN TRUY CẬP }}
+
+\bigskip
+\changefontsizes{13pt}
+\setlength{\parindent}{0cm}
+I. Tạo user 
+
+\setlength{\parindent}{2cm}
+sp\_addlogin 'NhanVien', '123456', 'QLSHOW'
+
+sp\_adduser 'NhanVien', 'NhanVien'
+
+
+sp\_addlogin 'Quanly', '123456', 'QLSHOW'
+
+sp\_adduser 'Quanly', 'Quanly'
+
+\bigskip
+\changefontsizes{13pt}
+\setlength{\parindent}{0cm}
+II.  Phân quyền truy cập, sử dụng 
+
+1)
+
+\setlength{\parindent}{0.5cm}
+GRANT select, insert, update, delete
+
+On Nguoi
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On ThiSinh
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On NgheSy
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On ChuongTrinhMCDan
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On AlbumCaSy
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On BaiHat
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On TheLoai
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On BaiHatThuocTheLoai
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On NhacSySangTac
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On TinhThanh
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On NhaSanXuat
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On KenhTruyenHinh
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On MuaThi
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On GiuBanQuyenMuaThi
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On PhatSong
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On VONGTHI
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On PhatSong
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On TS\_THAMGIA\_VT
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On VONG\_THUGIONG
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On VONG\_NHAHAT
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On VONG\_BANKET
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert, update, delete
+
+On VONG\_GALA
+
+To NhanVien
+
+\bigskip
+
+
+\setlength{\parindent}{0cm}
+2)
+
+
+\setlength{\parindent}{0.5cm}
+
+GRANT select, insert
+
+On TS\_THAMGIA\_VTG
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert
+
+On TS\_HATTAI\_VTG
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert
+
+On TS\_HATTAI\_VNH
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert
+
+On NHOMCA
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert
+
+On NHOMCA\_HATBH
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert
+
+On TS\_THAMGIA\_VBK
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert
+
+On TS\_HATTAI\_VBK
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert
+
+On TS\_THAMGIA\_VGL
+
+To NhanVien
+
+\bigskip
+
+GRANT select, insert
+
+On TS\_HATTAI\_VGL
+
+To NhanVien
+
+\bigskip
+
+\setlength{\parindent}{0cm}
+3)
+
+\setlength{\parindent}{0.5cm}
+GRANT all
+
+On Nguoi 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On ThiSinh 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On NgheSy 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On ChuongTrinhMCDan 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On AlbumCaSy 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On BaiHat 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On TheLoai 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On BaiHatThuocTheLoai 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On NhacSySangTac 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On TinhThanh 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On NhaSanXuat 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On KenhTruyenHinh 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On MuaThi 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On GiuBanQuyenMuaThi 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On PhatSong 
+
+To Quanly
+
+\bigskip
+
+
+GRANT all
+
+On VONGTHI 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On TS\_THAMGIA\_VT
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On VONG\_THUGIONG
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On TS\_THAMGIA\_VTG
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On TS\_HATTAI\_VTG 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On VONG\_NHAHAT
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On TS\_HATTAI\_VNH
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On NHOMCA 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On NHOMCA\_HATBH 
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On VONG\_BANKET
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On TS\_THAMGIA\_VBK
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On TS\_HATTAI\_VBK
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On VONG\_GALA
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On TS\_THAMGIA\_VGL
+
+To Quanly
+
+\bigskip
+
+GRANT all
+
+On TS\_HATTAI\_VGL
+
+To Quanly
+
+\bigskip
+
+
+\setlength{\parindent}{0.5cm}
+
+
+
+
+\newpage
+
+
+
+\newpage
+%Page ?? + 1
+\newpage
+\changefontsizes{16pt}
+\centerline{\textbf{TÀI LIỆU THAM KHẢO}}
+
+\vspace{1.2cm}
+\changefontsizes{14pt}
+\textbf{Tiếng Việt}
+
+
+
+\vspace{3cm}
+\textbf{Tiếng Anh}
+
+
+
+
+\end{document}

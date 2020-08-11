@@ -1,0 +1,31 @@
+\begin{table}[htp]
+\centering
+\begin{tabular}{p{0.2\textwidth}p{0.4\textwidth}p{0.4\textwidth}}
+	
+\textbf{Phương pháp}            & \textbf{Ưu điểm} & \textbf{Hạn chế}  
+\\
+Truyền thống
+&
+\begin{tabular}[c]{@{}l@{}}- Đơn giản\\ - Dễ hiểu\end{tabular}
+&
+\begin{tabular}[c]{@{}l@{}}- Đòi hỏi dữ liệu hoàn chỉnh\\ - Chỉ có mối quan hệ tuyến tính\\- Hiệu quả với đơn biến\\- Kém hiệu quả với chu kỳ dài\end{tabular}
+\\ \\
+MLP
+&
+\begin{tabular}[c]{@{}l@{}}- Xấp xỉ phi tuyến\\ - Chịu được nhiễu (Noise)\\- Xử lý được đầu vào đa biến\\- Dự đoán được nhiều bước\end{tabular}
+&
+\begin{tabular}[c]{@{}l@{}}- Require meaningful mapping\\between inputs and outputs \\ - Rely on lag observations \\ - Static mapping function\\and fixed outputs \& inputs \end{tabular}
+\\ \\ 
+CNN
+&
+\begin{tabular}[c]{@{}l@{}}- Tất cả ưu điểm của MLP\\ - Kết xuất đặt trưng\end{tabular}
+&
+\begin{tabular}[c]{@{}l@{}}- Không thể học temporal\\dependence\end{tabular}
+\\ \\
+RNN
+&
+\begin{tabular}[c]{@{}l@{}}- Tất cả ưu điểm của CNN \\ - Học được temporal tpdependence \end{tabular}
+&
+\begin{tabular}[c]{@{}l@{}}- Còn đang tranh cãi \end{tabular}  
+\end{tabular}
+\end{table}

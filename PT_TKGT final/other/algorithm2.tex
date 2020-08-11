@@ -1,0 +1,36 @@
+
+\begin{minipage}{.9\linewidth}
+	\begin{algorithm}[H]
+		\SetKwInOut{Input}{Đầu vào}
+		\SetKwInOut{Output}{Đầu ra}
+		\SetKwProg{Algorithm}{function LCS}{}{}
+		\Algorithm{$(str1, str2, lcs)$}
+		{ 
+			\Input{2 chuỗi cần tìm dãy con chung và 1 biến lưu giá trị}
+			\Output{Chuỗi con chung dài nhất}
+			
+			\If{$str1 = 0 $ \textbf{or} $ str2 = 0$}
+			{\textbf{return} $lcs$;}
+			
+			\If{$str1[0] = str2[0]$}
+			{
+				$str1.Remove(str1[0])$;\\
+				$str2.Remove(str2[0])$;\\
+				$lcs \leftarrow lcs + str1[0]$;\\
+				\textbf{return} LCS($str1, str2, lcs$);}
+			\Else{
+				$newstr1 = str1$;\\
+				$newstr1.remove(str1[0])$;\\
+				$child1 = $LCS($newstr1, str2, lcs$);\\
+				$newstr2 = str2$;\\
+				$newstr2.remove(str2[0])$;\\
+				$child2 = $LCS($str1, newstr2, lcs$);\\
+				\textbf{return} max($child1, child2,$ key=length);
+			}
+			
+		}
+		\caption{Chuỗi con chung dài nhất}
+		\label{alg:algorithm1}
+	\end{algorithm}
+\end{minipage}
+

@@ -1,0 +1,40 @@
+
+\begin{minipage}{.9\linewidth}
+	\begin{algorithm}[H]
+		\SetKwInOut{Input}{Đầu vào}
+		\SetKwInOut{Output}{Đầu ra}
+		\SetKwProg{Algorithm}{function LIS}{}{}
+		\Algorithm{$(array)$}
+		{ 
+			\Input{Mảng các số nguyên}
+			\Output{Chuỗi con tăng dài nhất}
+			
+			$val$ is an array of $n$ zeros;
+			
+			\For{$i \leftarrow n - 1$ \KwTo $0$}{
+				\For{$j \leftarrow i$ \KwTo $n - 1$}{
+					\If{$array_j > array_i$ \textbf{and} $val_j \geq val_i$  }
+					{$val_i \leftarrow val_j + 1$;}
+				}
+			}
+			
+			$lis$ is an interger array;
+			
+			$m \leftarrow max(val)$;
+			
+			\For{$i \leftarrow i$ \KwTo $n - 1$}{
+				\If{$val_i = m$  }	{
+					$lis$.Insert($array$($i$));
+					
+					$m \leftarrow m - 1$
+				}
+				
+			}
+			
+			\Return{$lis$}
+		}
+		\caption{Chuỗi con tăng dài nhất}
+		\label{alg:algorithm1}
+	\end{algorithm}
+\end{minipage}
+

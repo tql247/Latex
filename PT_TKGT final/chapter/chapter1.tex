@@ -1,0 +1,127 @@
+\newpage
+\changefontsizes{16pt}
+\centerline{\textbf{\hyperlink{page.6}{CHƯƠNG 1: PHÁT BIỂU BÀI TOÁN}}}
+
+
+
+\bigskip
+\changefontsizes{14pt}
+
+\setlength{\parindent}{0.0cm}
+\textbf{1.1 Đặt vấn đề.}
+
+\smallskip
+\changefontsizes{13pt}
+\setlength{\parindent}{1cm}
+
+
+Bài tập cuối kỳ này thể hiện cách giải các bài toán theo phương pháp quy hoạch động qua ba bài toán: chuỗi con chung dài nhất (Longest Common String), chuỗi tăng dài nhất (Longest Increase Sequence) và cây nhị phân vô hạn.
+
+\smallskip
+Nội dung bài toán:
+
+\vspace{-0.35cm}
+\begin{enumerate}
+	\leftskip1cm
+	
+	\item Dãy con chung dài nhất LCS (Longest Common Subsequence): Nhập vào 2 xâu A và B, tìm xâu con chung dài nhất của 2 xâu đó, in ra xâu con chung.
+	
+	\vspace{-0.35cm}
+	\item Dãy con tăng dài nhất LIS (Longest Increasing Susequence): Nhập vào 1 dãy số, hãy tìm dãy con tăng dài nhất của dãy số đó, in ra kết quả. (1.5 điểm/8)
+	
+	
+	\vspace{-0.35cm}
+	\item Trong một cây nhị phân vô hạn:
+	
+	
+	\vspace{-0.4cm}
+	\begin{itemize}
+		\leftskip1cm
+		\item Mỗi nút có đúng 2 con – một con trái và một con phải.
+		\vspace{-0.1cm}
+		\item Nếu một nút được gán nhãn bằng số nguyên $X$, thì con trái của nó được gán nhãn $2 \times x$ và con phải của nó được gán nhãn $2 \times x + 1$.
+		\vspace{-0.1cm}
+		\item Gốc của cây được gán nhãn 1.
+	\end{itemize}
+	
+	\vspace{-0.35cm}
+	Một cuộc dạo chơi trên cây nhị phân bắt đầu từ gốc. Tại mỗi bước, ta sẽ nhảy tới con trái hoặc con phải của nút hiện thời, hoặc là dừng lại tại chính nút đó để nghỉ.
+	
+	\vspace{-0.15cm}
+	Một cuộc dạo chơi được mô tả bằng một chuỗi các chữ cái 'L', 'R' và 'P':
+
+	
+	\vspace{-0.4cm}
+	\begin{itemize}
+		\leftskip1cm
+		\item 'L' thể hiện bước nhảy tới con trái;
+		\vspace{-0.1cm}
+		\item 'R' thể hiện bước nhảy tới con phải;
+		\vspace{-0.1cm}
+		\item 'P' thể hiện việc dừng để nghỉ.
+	\end{itemize}
+	
+	\vspace{-0.35cm}
+	Giá trị của một cuộc dạo chơi là nhãn của nút mà chúng ta kết thúc. Ví dụ, giá trị của cuộc dạo chơi LR là 5, trong khi giá trị của cuộc dạo chơi RPP là 3.
+	
+	\vspace{-0.1cm}
+	Một tập hợp các cuộc dạo chơi được mô tả bởi một chuỗi các kí tự 'L', 'R', 'P' và '*'. Mỗi dấu '*' có	thể là một trong 3 cách di chuyển; tập hợp các cuộc dạo chơi chứa tất cả các cuộc dạo chơi thích hợp với khuôn mẫu đó.
+	
+	\vspace{-0.1cm}
+	Ví dụ, tập hợp L*R chứa các cuộ dạo chơi LLR, LRR và LPR. Tập hợp ** chứa các cuộc dạo chơi LL, LR, LP, RL, RR, RP, PL, PR và PP.
+	
+	\vspace{-0.1cm}
+	Cuối cùng, giá trị của một tập hợp các cuộc dạo chơi đúng bằng tổng các giá trị của tất cả các cuộc	dạo chơi trong tập hợp đó.
+	
+	\vspace{-0.1cm}
+	Tính giá trị của một tập hợp các cuộc dạo chơi cho trước.
+\end{enumerate}
+
+\bigskip
+\changefontsizes{14pt}
+
+\setlength{\parindent}{0.0cm}
+\textbf{1.2 Cách tiếp cận.}
+
+
+\smallskip
+\changefontsizes{13pt}
+\setlength{\parindent}{1cm}
+
+%fill here
+Theo yêu cầu của đề tài, các bài toán trên phải được giải theo phương pháp quy hoạch động, một phương pháp giảm thời gian chạy của các thuật toán thể hiện các tính chất của các bài toán con gối nhau (overlapping subproblem) và cấu trúc con tối ưu (optimal substructure).
+
+\smallskip
+Quy hoạch động thường dùng một trong hai cách tiếp cận:
+
+\vspace{-0.35cm}
+\begin{itemize}
+	\leftskip1cm
+	\item top-down (Từ trên xuống): Bài toán được chia thành các bài toán con, các bài toán con này được giải và lời giải được ghi nhớ để phòng trường hợp cần dùng lại chúng.
+	\vspace{-0.25cm}
+	\item bottom-up (Từ dưới lên): Tất cả các bài toán con có thể cần đến đều được giải trước, sau đó được dùng để xây dựng lời giải cho các bài toán lớn hơn.
+\end{itemize}
+
+
+\vspace{-0.15cm}
+\changefontsizes{14pt}
+
+\setlength{\parindent}{0.0cm}
+\textbf{1.3 Ý nghĩa khoa học và thực tiễn của bài toán.}
+
+\smallskip
+\changefontsizes{13pt}
+\setlength{\parindent}{1cm}
+Ba bài toán trên có nhiều ý nghĩa khoa học và thực tiễn từ vi mô đến vĩ mô. Trong đó, những ý nghĩa quan trọng nhất là:
+
+
+\vspace{-0.35cm}
+\begin{itemize}
+	\leftskip1cm
+	\item Bài toán LCS hỗ trợ trong việc so sánh chuỗi và mức độ tương đồng giữa các chuỗi, các đoạn văn. Có thể ứng dụng vào việc xây dựng hệ thống trả lời câu hỏi tự động.
+	\vspace{-0.25cm}
+	\item Bài toán LIS giúp phát hiện chuỗi tăng dài nhất của một dãy số, qua đó có thể sử dụng cho các công việc liên quan đến sự tăng trưởng của một tiến trình nào đó.
+	\vspace{-0.25cm}
+	\item Giúp sinh viên nắm rõ hơn bản chất của các bài toán quy hoạch động và có thể sử dụng thành thạo các giải thuật, phương pháp chia nhỏ bài toán từ đó áp dụng vào các vấn đề lớn trong thực tế.
+	
+\end{itemize}
