@@ -1,0 +1,7 @@
+\contentsline {chapter}{\numberline {1}Các mô hình time series forecasting}{2}%
+\contentsline {section}{\numberline {1.1}Autoregressive Integrated Moving Average (ARIMA)}{2}%
+\contentsline {section}{\numberline {1.2}Generalize Autoregressive Conditionally Hestoroscedastic \\ (GARCH)}{3}%
+\contentsline {section}{\numberline {1.3}Long Short Term Memories (LSTM)}{3}%
+\contentsline {chapter}{\numberline {2}Đánh giá các mô hình dự báo}{4}%
+\contentsline {chapter}{\numberline {3}Tổng kết}{5}%
+\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{6}%

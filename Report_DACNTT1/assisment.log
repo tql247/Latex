@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.18)  11 AUG 2020 09:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.12)  15 AUG 2020 10:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1521,21 +1521,11 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 \markdownLaTeXTable=\toks50
 \markdownLaTeXTableAlignment=\toks51
 \markdownLaTeXTableEnd=\toks52
-))
-(./requirement/command.tex) (./assisment.aux
-
-LaTeX Warning: Label `fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig1' multiply defined.
-
 )
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+))
+(./requirement/command.tex) (./assisment.aux)
 \openout1 = `assisment.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -1555,7 +1545,8 @@ LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 5.
 LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 5
 .
- (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdacmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
 LaTeX Font Info:    ... okay on input line 5.
@@ -1646,7 +1637,7 @@ LaTeX Info: Redefining \nameref on input line 5.
 \openout7 = `assisment.out'.
 
  (./chapter/base/cover.tex
-<./images/logo.png, id=7, 503.8825pt x 279.0425pt>
+<./images/logo.png, id=31, 503.8825pt x 279.0425pt>
 File: ./images/logo.png Graphic file (type png)
 <use ./images/logo.png>
 Package pdftex.def Info: ./images/logo.png  used on input line 12.
@@ -1672,164 +1663,214 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--1
 
 [3]) (./chapter/base/abstract.tex [4]) (./chapter/base/catalog.tex [5])
 (./chapter/base/note.tex [6]) (./chapter/main content/chapter1.tex [7]
-<./images/stock.jpg, id=71, 180.675pt x 120.45pt>
-File: ./images/stock.jpg Graphic file (type jpg)
-<use ./images/stock.jpg>
-Package pdftex.def Info: ./images/stock.jpg  used on input line 16.
-(pdftex.def)             Requested size: 397.48344pt x 264.98895pt.
- [8 <./images/stock.jpg>]
-<./images/weather.png, id=77, 1204.5pt x 803.0pt>
-File: ./images/weather.png Graphic file (type png)
-<use ./images/weather.png>
-Package pdftex.def Info: ./images/weather.png  used on input line 43.
-(pdftex.def)             Requested size: 361.35278pt x 240.90186pt.
- [9 <./images/weather.png>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-00.
+Ch\uhorn \ohorn ng 1.
 
-(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [10] (./tables/compare.tex
-LaTeX Font Info:    Calculating math sizes for size <13> on input line 3.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
-.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 8.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 16.
+
+[8
+
+]) (./chapter/main content/chapter2.tex [9]
+Ch\uhorn \ohorn ng 2.
+
+Package hyperref Warning: Composite letter `\textdotbelow+\UHORN'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textdotbelow' on input line 1.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\UHORN' on input line 1.
+
+) (./chapter/main content/chapter3.tex [10
+
+]
+Ch\uhorn \ohorn ng 3.
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\h' on input line 1.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\OCIRCUMFLEX' on input line 1.
+
+
+Package hyperref Warning: Composite letter `\textacute+\ECIRCUMFLEX'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textacute' on input line 1.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\ECIRCUMFLEX' on input line 1.
+
+) (./chapter/base/reference.tex [11
+
+]
+LaTeX Font Info:    Trying to load font information for T5+lmtt on input line 1
+0.
+ (/usr/share/texmf/tex/latex/lm/t5lmtt.fd
+File: t5lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 10.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+0.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+0.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-3.
+10.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-3.
+10.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <13> on input line 3.
+(Font)              <13> on input line 10.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9.87993> on input line 3.
+(Font)              <9.87993> on input line 10.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.80008> on input line 3.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+(Font)              <7.80008> on input line 10.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <13> not available
-(Font)              size <12> substituted on input line 3.
+(Font)              size <12> substituted on input line 10.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <13> not available
-(Font)              size <12> substituted on input line 3.
+(Font)              size <12> substituted on input line 10.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <13> not available
-(Font)              size <12> substituted on input line 3.
+(Font)              size <12> substituted on input line 10.
 
 LaTeX Font Info:    Trying to load font information for MDA+mdbch on input line
- 3.
+ 10.
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
 File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
 )
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 12.48009pt on input line 3.
+(Font)              scaled to size 12.48009pt on input line 10.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 9.48479pt on input line 3.
+(Font)              scaled to size 9.48479pt on input line 10.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 7.48811pt on input line 3.
-LaTeX Font Info:    Trying to load font information for U+zavm on input line 3.
-
+(Font)              scaled to size 7.48811pt on input line 10.
+LaTeX Font Info:    Trying to load font information for U+zavm on input line 10
+.
 
 (/usr/share/texlive/texmf-dist/tex/latex/arev/uzavm.fd
 File: uzavm.fd 2006/05/30 Fontinst v1.929 font definitions for U/zavm.
 )
-Overfull \hbox (12.75983pt too wide) in paragraph at lines 27--28
-[][]| 
+Overfull \hbox (208.68886pt too wide) in paragraph at lines 9--11
+[]\T5/lmr/m/n/13 [1]. []$\T5/lmtt/m/n/13 https : / / towardsdatascience . com /
+ deep-[]learning-[]for-[]time \ -[]series-[]and-[]why-[]deep-[]learning-[]a6120
+b147d60$[] 
  []
 
 
-Overfull \hbox (35.993pt too wide) in paragraph at lines 3--31
- [][] 
+Overfull \hbox (11.20634pt too wide) in paragraph at lines 41--43
+[]\T5/lmr/m/n/13 [9]. []$\T5/lmtt/m/n/13 https : / / www . kaggle . com / phamd
+inhkhanh / garch-[]timeseries-[]model ? fbclid =
  []
 
-) [11]) (./chapter/main content/chapter2.tex [12]
-<./images/stock.png, id=96, 1383.1675pt x 655.44875pt>
-File: ./images/stock.png Graphic file (type png)
-<use ./images/stock.png>
-Package pdftex.def Info: ./images/stock.png  used on input line 27.
-(pdftex.def)             Requested size: 414.95345pt x 196.63614pt.
- [13 <./images/stock.png>]
-<./images/pre.png, id=103, 546.54187pt x 389.95688pt>
-File: ./images/pre.png Graphic file (type png)
-<use ./images/pre.png>
-Package pdftex.def Info: ./images/pre.png  used on input line 53.
-(pdftex.def)             Requested size: 437.23409pt x 311.96591pt.
-
-[14 <./images/pre.png>]
-<./images/sales.png, id=108, 1128.215pt x 661.47125pt>
-File: ./images/sales.png Graphic file (type png)
-<use ./images/sales.png>
-Package pdftex.def Info: ./images/sales.png  used on input line 80.
-(pdftex.def)             Requested size: 451.278pt x 264.58382pt.
- [15 <./images/sales.png (PNG copy)>])
-(./chapter/main content/chapter4.tex [16]) (./chapter/base/reference.tex
-[17] [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
+[12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 51.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
  (./assisment.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 51.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
 Package rerunfilecheck Info: File `assisment.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: F8FC6E9FDA93D571EAC5DFF31E4C5F35;497.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
  ) ) 
 Here is how much of TeX's memory you used:
- 28419 strings out of 481239
- 512497 string characters out of 5920377
- 892492 words of memory out of 5000000
- 43008 multiletter control sequences out of 15000+600000
- 643446 words of font info for 77 fonts, out of 8000000 for 9000
+ 28439 strings out of 481239
+ 512303 string characters out of 5920377
+ 1076113 words of memory out of 5000000
+ 43026 multiletter control sequences out of 15000+600000
+ 669722 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,16n,83p,1386b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,7n,83p,1261b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{page.30} has been referenced but does not exist
 , replaced by a fixed one
 
 pdfTeX warning (dest): name{page.32} has been referenced but does not exist, re
 placed by a fixed one
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-t5.enc}{/usr/share/texmf/fonts/enc/dvip
-s/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/l
-mr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb>
-Output written on assisment.pdf (18 pages, 770632 bytes).
+pdfTeX warning (dest): name{page.17} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.15} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.14} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.13} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.10} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.9} has been referenced but does not exist, rep
+laced by a fixed one
+
+pdfTeX warning (dest): name{page.7} has been referenced but does not exist, rep
+laced by a fixed one
+
+pdfTeX warning (dest): name{page.6} has been referenced but does not exist, rep
+laced by a fixed one
+
+pdfTeX warning (dest): name{page.5} has been referenced but does not exist, rep
+laced by a fixed one
+
+pdfTeX warning (dest): name{page.4} has been referenced but does not exist, rep
+laced by a fixed one
+
+pdfTeX warning (dest): name{page.3} has been referenced but does not exist, rep
+laced by a fixed one
+
+pdfTeX warning (dest): name{page.2} has been referenced but does not exist, rep
+laced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-t5.enc}</usr/share/texmf/fonts/type1/pu
+blic/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmtt12.pfb>
+Output written on assisment.pdf (12 pages, 150030 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

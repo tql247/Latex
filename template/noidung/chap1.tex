@@ -1,0 +1,68 @@
+\chapter{Các mô hình time series forecasting}
+
+Để thực hiện, xây dựng các mô hình chuỗi thời gian, hiện tại có hai ngôn ngữ hỗ trợ tốt cho việc này là R (R có các packages như forecast và lmtest) và python. Mặc dù python dễ sử dụng và có cộng đồng lớn mạnh hơn nhiều so với R, nhưng R lại hỗ trợ tốt hơn python trong thống kê và hiện thực hóa mô hình chuỗi thời gian. Đó cũng là một trong những lý do mà các nhà thống kê và kinh tế lượng ưa chuộng sử dụng R. Tuy nhiên, ở bài báo cáo này chúng ta chỉ dừng lại với python trong việc tìm hiểu về cách xây dựng các mô hình.
+
+\section{Autoregressive Integrated Moving Average (ARIMA)}
+
+Thông qua bài báo cáo trước, ắt hẳn chúng ta đã biết rằng chuỗi thời gian là các thông số được ghi lại theo thời gian, theo các mốc thời gian xác định. Và giá trị của hiện tại có sự tương quan đến các giá trị trong quá khứ, dễ hiểu hơn là để xác định giá trị trong thời điểm hiện tại cần có các giá trị trong quá khứ.
+
+\bigskip
+Mô hình ARIMA là một mô hình dựa trên ý tưởng dự đoán giá trị tương tai bằng các thông số đã ghi nhận được trong quá khứ. Và giả thuyết chuỗi thời gian là chuỗi dừng và phương sai của sai số không đổi
+
+\bigskip
+ARIMA gồm AR (Auto regression), I (Intergrated) kết hợp với MA (Moving Average). Trong đó:
+
+\begin{itemize}
+	\item \textbf{Auto regression}: Có nghĩa là tự hồi qui. Thành phần hồi qui này gồm một tập hợp các giá trị lùi về p bước thời gian của chuỗi. Được biểu diễn dưới dạng:
+	\begin{center}
+		$ AR(p) = \sum_{i=0}^{p} \phi x^0_{t-0} = \phi_0  + \phi x_{t-1} + \phi x_{t-2} + ... + \phi x_{t-p}$
+	\end{center}
+	\item \textbf{Moving average}: Có nghĩa là trung bình trượt. Đây là quá trình dịch chuyển/thay đổi giá trị trung bình của chuỗi. Có nhiều phương pháp để tính giá trị trung bình của chuỗi như WMA, EMA hay đơn giản nhất là Simple Moving Average (SMA):
+	\begin{center}
+		$ MA(p) = \sum_{i=0}^{p} \phi x^0_{t-0} = $
+	\end{center}
+\end{itemize}
+
+
+ Hầu hết các chuỗi thời gian sẽ có xu hướng tăng hoặc giảm theo thời gian, do đó yếu tố chuỗi dừng thường không đạt được. Trong trường hợp chuỗi không dừng thì ta sẽ cần biến đổi sang chuỗi dừng bằng sai phân. Khi đó tham số đặc trưng của mô hình sẽ có thêm thành phần bậc của sai phân d và mô hình được đặc tả bởi 3 tham số ARIMA(p, d, q).
+
+\section{Generalize Autoregressive Conditionally Hestoroscedastic \\ (GARCH)}
+
+GARCH (Generalize Autoregressive Conditionally Hestoroscedastic) là một dạng
+mô hình thuộc nhóm hồi qui chuỗi thời gian thường được áp dụng phổ biến trong
+các dự báo kinh tế và tài chính. Ban đầu, mô hình gốc ARCH được giới thiệu
+bởi Engle (1982) để hồi qui các chuỗi dừng nhưng có mối quan hệ phi tuyến tính.
+Nguyên nhân của sự phi tuyến tính này xuất phát từ việc phương sai sai số của mô
+viiihình thay đổi dẫn đến việc áp dụng các mô hình dựa trên giả định phương sai sai
+số không đổi như ARIMA hoặc ARMA không đạt kết quả chuẩn xác. Trong khi đó
+hiện tượng phương sai sai số thay đổi khá phổ biến trong các chuỗi chứng khoán và
+tài chính bởi luôn có những cú sốc kinh tế thường đến bất ngờ và là một nhân tố
+mà mô hình không thể giải thích được. Trong biểu diễn phân phối của chuỗi chúng
+ta sẽ thấy chuỗi có dạng đuôi béo (fat-tail). Điều đó cho thấy chuỗi có nhiều outlier
+tập trung ở các khoảng cận trên hoặc cận dưới.
+Bên cạnh đó một mô hình ARCH là một mô hình được xây dựng với biến
+mục tiêu là phương sai của một chuỗi số. Do đó ARCH thường được sử dụng để
+giải thích sự thay đổi hoặc sự biến động của phương sai chuỗi. Mặc dù ARCH có
+thể được sử dụng để mô tả sự tăng tiến của phương sai qua thời gian nhưng thay
+vào đó nó thường được sử dụng để mô tả sự gia tăng biến động chuỗi trong một
+khoảng thời gian ngắn.
+Trong kinh tế và tài chính mô hình ARCH thường được áp dụng với những
+chuỗi tăng dần (hoặc giảm dần) theo chu kì như giá chứng khoán, GDP, qui mô
+dân số,. . . . Do đó chúng ta cần các biến để diễn tả được xu thế tăng (giảm) này
+nhưng vẫn đảm bảo được chuỗi dừng như là điều kiện cần của chuỗi thời gian. Vì
+thế các biến thường được sử dụng trong mô hình GARCH thường là:
+Phần trăm lãi / lỗ qua thời gian: Ngoài ra mô hình GARCH có thể sử dụng
+bất kì biến nào khác có yếu tố tăng giảm phương sai theo chu kì. Chẳng hạn như
+số dư từ chính mô hình ARIMA đã được hồi qui.
+
+\section{Long Short Term Memories (LSTM)}
+
+
+%\begin{figure}
+%	\centering
+%	\includegraphics[scale=.7]{hinhanh/  }
+%	\caption{ }
+%\end{figure} 
+
+
+%\nocite{*}

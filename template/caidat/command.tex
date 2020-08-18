@@ -1,0 +1,57 @@
+\newcommand{\ocite}[1]{\citeauthor{#1} (\citeyear{#1})} 
+\newcommand{\icite}[1]{\citeauthor{#1}, \citeyear{#1}}
+\newcommand{\python}[1]{\textcolor[rgb]{0,0,1}{\texttt{#1}}}
+
+\newtheorem{Note}{\textbf{Chú ý}}[section]
+\newtheorem{Def}{\textbf{Định nghĩa}}[section]
+\newtheorem{Example}{\textbf{Ví dụ}}[section]
+
+\theoremstyle{remark}
+
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\vec}[1]{\bm{#1}}
+\newcommand{\dotprod}[1]{\langle #1 \rangle}
+\newcommand{\norm}[1]{\| #1 \|}
+\newcommand{\cov}{\textup{cov}}
+\newcommand{\cor}{\textup{cor}}
+\newcommand{\var}{\textup{var}}
+\newcommand{\vars}[1]{\textup{var}\left[#1\right]}
+\newcommand{\cors}[1]{\textup{cor}\left[#1\right]}
+\newcommand{\covs}[1]{\textup{cov}\left[#1\right]}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+\newcommand{\diag}[1]{\text{diag}\left(#1\right)}
+\renewcommand{\det}[1]{\text{det}\left(#1\right)}
+\renewcommand{\diag}[1]{\text{diag}\left(#1\right)}
+\newcommand{\expect}[1]{\mathbb{E}[#1]}
+\newcommand{\std}[1]{\text{std}[#1]}
+\newcommand{\normal}[1]{\mathcal{N}(#1)}
+\renewcommand{\exp}[1]{\text{exp}\left(#1\right)}
+\newcommand{\laplace}[1]{\mathcal{N}(#1)}
+\newcommand{\loss}[2]{\mathcal{L}(#1, #2)}
+\newcommand{\minimize}[1]{\underset{#1}{\text{minimize }}}
+\newcommand{\trace}[1]{\text{Tr}(#1)}
+\newcommand{\DetMatrix}[1]{\begin{vmatrix}#1\end{vmatrix}}
+\newcommand{\bias}[1]{\text{bias}(#1)}
+
+% math bb 
+\newcommand{\bH}{\mathbb{H}}
+% KL 
+\newcommand{\KL}[2]{\mathbb{KL}(#1\Vert#2)}
+% R 
+\newcommand{\bR}{\mathbb{R}}
+% gradient 
+\newcommand{\grad}{\nabla}
+\newcommand{\range}[1]{\left(#1\right)}
+% dx 
+\newcommand{\dx}{\text{d}x}
+
+
+
+\newsavebox{\measuredSize}
+\newcommand{\resizeToWidth}[2]{%
+	\pgfmathsetmacro{\pgfplotswidth}{#2}%
+	\begin{lrbox}{\measuredSize}#1\end{lrbox}%
+	\pgfmathsetmacro{\pgfplotswidth}{2*\pgfplotswidth-\wd\measuredSize}%
+	#1%
+}
