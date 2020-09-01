@@ -17,14 +17,37 @@ ARIMA gồm AR (Auto regression), I (Intergrated) kết hợp với MA (Moving A
 	\begin{center}
 		$ AR(p) = \sum_{i=0}^{p} \phi x^0_{t-0} = \phi_0  + \phi x_{t-1} + \phi x_{t-2} + ... + \phi x_{t-p}$
 	\end{center}
-	\item \textbf{Moving average}: Có nghĩa là trung bình trượt. Đây là quá trình dịch chuyển/thay đổi giá trị trung bình của chuỗi. Có nhiều phương pháp để tính giá trị trung bình của chuỗi như WMA, EMA hay đơn giản nhất là Simple Moving Average (SMA):
+	\item \textbf{Moving average}: Có nghĩa là trung bình trượt. Đây là quá trình dịch chuyển - quá trình thay đổi giá trị trung bình của chuỗi. Tuy nhiên chuỗi này phải thõa mãn các tính chất sau:
+	
+	
+	\begin{equation}
+	\begin{cases}
+	\text{E}(\epsilon_t) = 0 & (0)\\
+	\sigma(\epsilon_t) = \alpha & (2)\\
+	\rho(\epsilon_t, \epsilon_{t-s}) = 0, \forall s <= t & (3)
+	\end{cases}       
+	\end{equation}
+	Trong đó: (1) nghĩa là kỳ vọng phải bằng không và (2) phương sai không đổi để đảm bảo tính dừng của chuỗi. 
+	
+	Quá trình Moving average sẽ tìm mối liên hệ về mặt tuyến tính giữa các phần tử ngẫu nhiên $\epsilon_t$ của giá trị hiện tại và quá khứ (stochastic term). Có nhiều phương pháp để tính giá trị trung bình của chuỗi như WMA, EMA hay đơn giản nhất là Simple Moving Average (SMA):
 	\begin{center}
-		$ MA(p) = \sum_{i=0}^{p} \phi x^0_{t-0} = $
+		$ MA(q) = \frac{ \sum_{i=0}^{q}Value_{t-i}}{q} $
+	\end{center}
+
+	\item \textbf{Intergrated}: Là quá trình đồng tích hợp hoặc lấy sai phân. Hầu hết các chuỗi thời gian không có tính dừng thường. Do đó ta cần biến đổi nó sang chuỗi dừng bằng sai phân. Khi biến đổi sang chuỗi dừng, các nhân tố ảnh hưởng thời gian được loại bỏ và chuỗi sẽ dễ dự báo hơn. Qúa trình sai phân bậc d của chuỗi được thực hiện như sau:
+	\begin{center}
+		$ \text{I}(1) = \Delta(x_t) = x_{t} - x_{t-1}$ (sai phân bậc 1)
+		
+		$ \text{I}(d) = \Delta^{d}(x_t) = \underbrace{\Delta(\Delta(\dots \Delta(x_t)))}_{\text{d times}} $ (sai phân bậc d)
 	\end{center}
 \end{itemize}
 
 
- Hầu hết các chuỗi thời gian sẽ có xu hướng tăng hoặc giảm theo thời gian, do đó yếu tố chuỗi dừng thường không đạt được. Trong trường hợp chuỗi không dừng thì ta sẽ cần biến đổi sang chuỗi dừng bằng sai phân. Khi đó tham số đặc trưng của mô hình sẽ có thêm thành phần bậc của sai phân d và mô hình được đặc tả bởi 3 tham số ARIMA(p, d, q).
+ Như vậy, tham số đặc trưng của mô hình được đặc tả bởi 3 tham số ARIMA(p, d, q). Và có thể được biểu diễn dưới dạng:
+\begin{center}
+	$ \Delta x_t = \phi_1 \Delta x_{t-1} +  \phi_2 \Delta x_{t-2} + ... +  \phi_p \Delta x_{t-p} + \theta_{1} \epsilon_{t-1} + \theta_{2} \epsilon_{t-2} + ... + \theta_{q} \epsilon_{t-q}
+	$
+\end{center}
 
 \section{Generalize Autoregressive Conditionally Hestoroscedastic \\ (GARCH)}
 

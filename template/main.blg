@@ -8,47 +8,56 @@ I was expecting a `,' or a `}'---line 17 of file ./bibliography.bib
  :  url = {https://phamdinhkhanh.github.io/2019/12/12/ARIMAmodel.html?fbclid=IwAR3MiaoWZnbsGcwd2LeJqSYQrNfUfFsc9Ez13DsBQjoOAKKA8NJsgfW2xE8#2-m%C3%B4-h%C3%ACnh-arima}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--empty journal in 1
+I was expecting a `,' or a `}'---line 24 of file ./bibliography.bib
+ :  
+ :  url = {https://www.investopedia.com/terms/s/sma.asp#:~:text=A%20simple%20moving%20average%20(SMA)%20is%20an%20arithmetic%20moving%20average,periods%20in%20the%20calculation%20average.}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty booktitle in 2
+Warning--empty publisher in 2
+Warning--empty year in 2
+Warning--empty booktitle in 1
+Warning--empty publisher in 1
 Warning--empty year in 1
-You've used 1 entry,
+You've used 2 entries,
             2118 wiz_defined-function locations,
-            499 strings with 4045 characters,
-and the built_in function-call counts, 219 in all, are:
-= -- 17
-> -- 7
+            501 strings with 4084 characters,
+and the built_in function-call counts, 484 in all, are:
+= -- 36
+> -- 14
 < -- 0
-+ -- 3
-- -- 2
-* -- 13
-:= -- 45
-add.period$ -- 2
-call.type$ -- 1
-change.case$ -- 4
++ -- 6
+- -- 4
+* -- 30
+:= -- 83
+add.period$ -- 4
+call.type$ -- 2
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 10
-empty$ -- 18
-format.name$ -- 2
-if$ -- 39
+cite$ -- 8
+duplicate$ -- 28
+empty$ -- 53
+format.name$ -- 4
+if$ -- 97
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 7
-num.names$ -- 2
-pop$ -- 8
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 11
+num.names$ -- 4
+pop$ -- 24
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 6
 quote$ -- 0
-skip$ -- 6
+skip$ -- 10
 stack$ -- 0
-substring$ -- 5
+substring$ -- 10
 swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
-warning$ -- 2
-while$ -- 2
-width$ -- 2
-write$ -- 9
-(There was 1 error message)
+type$ -- 8
+warning$ -- 6
+while$ -- 4
+width$ -- 3
+write$ -- 16
+(There were 2 error messages)
