@@ -1,4 +1,30 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{8}
+Jason Brownlee.
+\newblock {\em Deep Learning for Time Series Forecasting}.
+
+\bibitem{15}
+Jason Brownlee.
+\newblock How to create an arima model for time series forecasting in python.
+
+\bibitem{14}
+Jason Brownlee.
+\newblock Time series prediction with lstm recurrent neural networks in python
+  with keras.
+
+\bibitem{12}
+Minh-Hoang Bui.
+\newblock Hướng dẫn chi tiết về cơ chế của lstm và gru trong
+  nlp.
+
+\bibitem{9}
+Alexiei Dingli and Karl~Sant Fournier.
+\newblock Financial time series forecasting – a deep learning approach.
+
+\bibitem{3}
+Piotr Fryzlewicz.
+\newblock Financial time series, arch and garch models.
 
 \bibitem{2}
 ADAM HAYES.
@@ -7,5 +33,33 @@ ADAM HAYES.
 \bibitem{1}
 Pham~Dinh Khanh.
 \newblock Mô hình arima trong time series.
+
+\bibitem{7}
+Bryan Lim and Stefan Zohren.
+\newblock Time series forecasting with deep learning: A survey.
+
+\bibitem{11}
+Nguyễn~Trường Long.
+\newblock Giải thích chi tiết về mạng long short-term memory (lstm).
+
+\bibitem{13}
+Nttuan8.
+\newblock Long short term memory (lstm).
+
+\bibitem{6}
+Wikipedia.
+\newblock Time series.
+
+\bibitem{4}
+Tony Zhou.
+\newblock Deep learning for time series and why deep learning?
+
+\bibitem{10}
+Phạm Đình Khánh.
+\newblock Lstm.
+
+\bibitem{5}
+Hoàng Đức Quân.
+\newblock Time-series data.
 
 \end{thebibliography}

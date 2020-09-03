@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.12)  31 AUG 2020 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.12)  3 SEP 2020 11:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1065,12 +1065,12 @@ File: ./hinhanh/tdt.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./hinhanh/tdt.jpg  used on input line 13.
 (pdftex.def)             Requested size: 127.34071pt x 70.31924pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
@@ -1140,51 +1140,64 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 Ch\uhorn \ohorn ng 1.
+(./noidung/sub/1-1.tex
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-6.
-(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+5.
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [2
 
-] [3]) (./noidung/chap2.tex
-[4]
+])
+(./noidung/sub/1-2.tex
+<hinhanh/RNN.png, id=38, 755.82375pt x 248.93pt>
+File: hinhanh/RNN.png Graphic file (type png)
+<use hinhanh/RNN.png>
+Package pdftex.def Info: hinhanh/RNN.png  used on input line 8.
+(pdftex.def)             Requested size: 377.91095pt x 124.46469pt.
+ [3]
+<hinhanh/LSTM.png, id=51, 606.01407pt x 396.7322pt>
+File: hinhanh/LSTM.png Graphic file (type png)
+<use hinhanh/LSTM.png>
+Package pdftex.def Info: hinhanh/LSTM.png  used on input line 15.
+(pdftex.def)             Requested size: 424.20695pt x 277.71063pt.
+ [4 <./hinhanh/RNN.png> <./hinhanh/LSTM.png>]
+[5])) (./noidung/chap2.tex [6]
 Ch\uhorn \ohorn ng 2.
-) (./noidung/chap3.tex [5
+) (./noidung/chap3.tex [7
 
-]
+] [8]
 Ch\uhorn \ohorn ng 3.
-) (./khac/tailieuthamkhao.tex [6
+) (./khac/tailieuthamkhao.tex [9
 
-] (./main.bbl) [7
+] (./main.bbl) [10
 
 ])
 No file main.ind.
 (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 21262 strings out of 481239
- 391387 string characters out of 5920377
- 918838 words of memory out of 5000000
- 36025 multiletter control sequences out of 15000+600000
+ 21331 strings out of 481239
+ 392239 string characters out of 5920377
+ 915838 words of memory out of 5000000
+ 36083 multiletter control sequences out of 15000+600000
  660061 words of font info for 72 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 67i,9n,83p,765b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-t5.enc}{/usr/share/texmf/
-fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
+ 67i,9n,83p,747b,298s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/te
+xmf/fonts/enc/dvips/lm/lm-t5.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 }{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc
 /dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/s
 hare/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pf
-b></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on main.pdf (13 pages, 367905 bytes).
+lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy5.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
+Output written on main.pdf (16 pages, 414833 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 124 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
